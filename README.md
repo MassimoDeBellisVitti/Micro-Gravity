@@ -1,21 +1,19 @@
-# Simulink Model – Microgravity Attitude Platform
+# Simulink Model – Orbital Microgravity Simulator
 
 ## Overview
-This repository contains the **Simulink model** developed to support a two-month research internship focused on *inertia estimation for nanosatellite attitude simulators*.  
-The model reproduces the dynamics of a **planar microgravity platform** designed to emulate frictionless 3D rotational motion through an **air bearing system**.  
-It serves as a simulation environment to validate **inertia identification algorithms**, **Kalman filters**, and **attitude control strategies** before Hardware-in-the-Loop (HIL) implementation.
+This repository contains the **Simulink model** developed to simulate the **dynamics of a satellite platform under orbital microgravity conditions**.  
+The simulator reproduces a **planar air-bearing testbed**, designed to emulate the near-frictionless rotational motion of a spacecraft in low Earth orbit.  
+It provides a controlled environment for testing **attitude estimation**, **inertia identification**, and **control algorithms** prior to hardware implementation.  
+The model serves both as a **design validation tool** and as a **digital twin** for the physical microgravity simulator currently under development.
 
 ---
 
 ## Objectives
 The Simulink model was created to:
-- Reproduce the **rigid-body rotational dynamics** of the satellite simulator, including gravity torque, bearing friction, and external disturbances.  
-- Implement a **multi-stage inertia estimation pipeline** combining:
-  1. Initial nominal guess,
-  2. Least Squares (LS) estimation,
-  3. Instrumental Variable (IV) refinement.
-- Integrate and tune an **Extended Kalman Filter (EKF)** for real-time attitude estimation using quaternion kinematics.
-- Evaluate robustness against measurement noise, initial condition errors, and disturbance torques.
+- Reproduce the **rigid-body dynamics** of a microgravity platform, including reaction wheel actuation and external perturbations.  
+- Enable testing and tuning of **attitude estimation algorithms** (Extended Kalman Filter) and **control laws** (PD, LQR).  
+- Support **inertia identification and verification** under realistic orbital conditions.  
+- Provide a modular framework for **Hardware-in-the-Loop (HIL)** validation of satellite attitude simulators.
 
 ---
 
