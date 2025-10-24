@@ -7,14 +7,12 @@ load("attitude_platform_DataFile.mat")
 var_tau = 0;
 
 var_W_n =1e-9;    
-var_Q_n =1e-8;  
+var_Q_n =1e-15;  
 
-Theta = diag(var_W_n*ones(1, 3))*ts;
-Psi = diag(var_Q_n*ones(1, 4))*ts;
+Rtheta=eye(3)*var_Q_n*ts;
+Rw = diag(var_W_n*ones(1, 3))*ts;
 
-R=blkdiag(Theta,Psi);
-lambda=7.74264;
-Q = lambda * R ;
+Q = 1e-5*eye(7)*ts;
 
 H= eye(7);
 
